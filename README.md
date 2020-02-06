@@ -10,10 +10,13 @@ To call someone press their nickname in "users" list to the left
 
 
 Known bugs:
-React asks for keys when looping through messages
-P2P connection won't work because the server isn't https
-P2P won't reconnect because of incorrect peer destruction
-React Jest conflicts with NodeJS Jest
+React asks for keys when looping through messages;
+
+P2P connection won't work because the server isn't https;
+
+P2P won't reconnect because of incorrect peer destruction;
+
+React Jest conflicts with NodeJS Jest;
 
 
 Future plans:
