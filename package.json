@@ -1,0 +1,37 @@
+{
+  "name": "chat-test",
+  "version": "1.0.0",
+  "description": "Testing task: chat app with websockets",
+  "main": "server.js",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "env-cmd": "^10.0.1",
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2"
+  },
+  "scripts": {
+    "test": "env-cmd -f ./config/test.env jest --watch --runInBand",
+    "start": "env-cmd -f ./config/prod.env node server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\"  \"npm run client\"",
+    "server": "env-cmd -f ./config/dev.env nodemon server.js"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtmenStill/chat-test.git"
+  },
+  "author": "Atmen Still",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AtmenStill/chat-test/issues"
+  },
+  "homepage": "https://github.com/AtmenStill/chat-test#readme"
+}
